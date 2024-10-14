@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCycle</title>
+    <style>
+        /* Estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Video de fondo */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .background-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Espacio para el logo */
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        #logo {
+            max-width: 300px;
+            height: auto;
+        }
+
+        /* Estilo de la tarjeta descriptiva */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 90%;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+            line-height: 1.4em;
+        }
+
+        /* Botón de descarga */
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            p {
+                font-size: 0.9em;
+            }
+
+            #logo {
+                max-width: 100px;
+            }
+
+            .download-btn {
+                padding: 8px 18px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-video">
+        <video autoplay muted loop>
+            <source src="intro_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="container">
+        <!-- Espacio para el logo de GreenCycle -->
+        <div class="logo">
+            <img src="logo.png" alt="GreenCycle Logo" id="logo">
+        </div>
+
+        <div class="card">
+            <h1>GreenCycle</h1>
+            <p>GreenCycle es una iniciativa que promueve la sostenibilidad y el reciclaje en Colombia. Con nuestra aplicación, puedes encontrar puntos de reciclaje cercanos, participar en eventos y aprender consejos prácticos para reducir tu impacto ambiental.</p>
+            <p>Acá tienes el enlace de descarga para que puedas unirte a nuestra comunidad y empezar a marcar la diferencia.</p>
+            <a href="https://drive.google.com/uc?id=1vo4qZFx6KwMUU3uciTYWf0nIamKOHasM&export=download" class="download-btn" target="_blank">Descargar App</a>
+            <p style="margin-top: 15px; font-size: 0.9em;">Haz clic en el botón y luego selecciona "Descargar de todos modos" en la página que se abre para obtener la aplicación.</p>
+        </div>
+    </div>
+</body>
+</html>
